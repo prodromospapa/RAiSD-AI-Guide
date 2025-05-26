@@ -6,7 +6,7 @@ fi
 
 # Check if the environment is already installed
 if [ ! -d $(conda info --base)/envs/raisd-ai ]; then
-        conda env create -f raisd-ai.yml -y
+        conda env create -f raisd-ai.yml
 fi
 
 # download and compile RAiSD-AI and add it to the PATH
