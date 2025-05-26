@@ -38,15 +38,10 @@ RAiSD-AI -n neutral -mdl RAiSD_Model.Model -op SWP-SCN -I Mild-bottleneck-testin
 # Getting threshold from neutral output info file
 neutralRunName=neutral
 fprThresholdMUVAR=$(grep " muVar " RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
-
 fprThresholdMUSFS=$(grep " muSFS" RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
-
 fprThresholdMULD=$(grep " muLD " RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
-
 fprThresholdMU=$(grep " mu " RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
-
 fprThresholdPCL0=$(grep " sweepTR" RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
-
 fprThresholdPCL1=$(grep " muvar^sweepTR" RAiSD_Info.$neutralRunName | grep min | awk -F: '{print $2}' | awk '{print $1}')
 
 # Scanning sweep test data with RAiSD-AI
