@@ -1,13 +1,5 @@
 #!/bin/bash
 
-eval "$(conda shell.bash hook)"
-
-# Downdloading and compiling RAiSD-AI
-bash install.sh
-
-# Activating RAiSD-AI conda environment
-conda activate raisd-ai 
-
 # Downloading training raw data
 wget -O Mild-bottleneck-training.tar.xz https://figshare.com/ndownloader/files/54685451; tar -xvJf Mild-bottleneck-training.tar.xz
 
