@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Downloading training raw data
-wget -O Mild-bottleneck-training.tar.xz https://figshare.com/ndownloader/files/54685451; tar -xvJf Mild-bottleneck-training.tar.xz
+wget https://zenodo.org/records/18841026/files/Mild-bottleneck-training.tar.xz; tar -xvJf Mild-bottleneck-training.tar.xz
 
 # Preparing neutral training data for RAiSD-AI
 RAiSD-AI -n TrainingData -I Mild-bottleneck-training/neutral.ms -w 128 -L 100000 -its 50000 -op IMG-GEN -icl neutralTR -bin -typ 1 -frm
@@ -13,7 +13,7 @@ RAiSD-AI -n TrainingData -I Mild-bottleneck-training/selsweep.ms -w 128 -L 10000
 RAiSD-AI -n Model -I RAiSD_Images.TrainingData -op MDL-GEN -e 100 -f
 
 # Downloading test raw data
-wget -O Mild-bottleneck-testing.tar.xz https://figshare.com/ndownloader/files/54686921; tar -xvJf Mild-bottleneck-testing.tar.xz
+wget https://zenodo.org/records/18841026/files/Mild-bottleneck-testing.tar.xz; tar -xvJf Mild-bottleneck-testing.tar.xz
 
 # Preparing neutral test data for RAiSD-AI
 RAiSD-AI -n TestData -I Mild-bottleneck-testing/neutral.ms -w 128 -L 100000 -its 50000 -op IMG-GEN -icl neutralTE -bin -typ 1 -frm
