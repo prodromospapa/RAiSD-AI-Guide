@@ -11,6 +11,8 @@ fi
 
 # download and compile RAiSD-AI and add it to the PATH
 if [ ! -d ~/software/RAiSD-AI ]; then
+    eval "$(conda shell.bash hook)"
+    conda activate raisd-ai
     mydir=$(pwd)
     cd ~
     mkdir -p software
